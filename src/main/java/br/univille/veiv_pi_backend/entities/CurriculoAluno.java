@@ -1,0 +1,79 @@
+package br.univille.veiv_pi_backend.entities;
+
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "tb_curriculo_aluno")
+public class CurriculoAluno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String nome;
+    private String sobre;
+    private String habilidadesTecnicas;
+    private String experienciaProfissional;
+    private String previsaoDeConclusao;
+    private String Projetos;
+
+
+    public CurriculoAluno() {}
+
+    public CurriculoAluno(String nome, String sobre, String habilidadesTecnicas, String experienciaProfissional, String previsaoDeConclusao, String projetos) {
+        this.nome = nome;
+        this.sobre = sobre;
+        this.habilidadesTecnicas = habilidadesTecnicas;
+        this.experienciaProfissional = experienciaProfissional;
+        this.previsaoDeConclusao = previsaoDeConclusao;
+        Projetos = projetos;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobre() {
+        return sobre;
+    }
+
+    public void setSobre(String sobre) {
+        this.sobre = sobre;
+    }
+
+    public String getHabilidadesTecnicas() {
+        return habilidadesTecnicas;
+    }
+
+    public void setHabilidadesTecnicas(String habilidadesTecnicas) {
+        this.habilidadesTecnicas = habilidadesTecnicas;
+    }
+
+    public String getExperienciaProfissional() {
+        return experienciaProfissional;
+    }
+
+    public void setExperienciaProfissional(String experienciaProfissional) {
+        this.experienciaProfissional = experienciaProfissional;
+    }
+
+    public String getPrevisaoDeConclusao() {
+        return previsaoDeConclusao;
+    }
+
+    public void setPrevisaoDeConclusao(String previsaoDeConclusao) {
+        this.previsaoDeConclusao = previsaoDeConclusao;
+    }
+
+    public String getProjetos() {
+        return Projetos;
+    }
+
+    public void setProjetos(String projetos) {
+        Projetos = projetos;
+    }
+}
+
