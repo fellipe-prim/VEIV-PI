@@ -8,7 +8,8 @@ import jakarta.persistence.*;
 public class Aluno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nomeCompleto;
     private String cpf;
     private String telefone;
