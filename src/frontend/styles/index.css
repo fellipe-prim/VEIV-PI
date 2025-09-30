@@ -68,6 +68,16 @@ header .brand img {
   text-align: center;
 }
 
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../imgs/EstudantesUni.jpg") center center / cover no-repeat;
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.1); 
+  z-index: -1;
+}
+
 .hero h1 {
   font-size: 2.4rem;
   margin-bottom: 12px;
