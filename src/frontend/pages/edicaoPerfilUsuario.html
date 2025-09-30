@@ -1,0 +1,32 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../styles/edicaoPerfilUsuario.css">
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">&#8592;</a>
+    <script src="../scripts/edicaoPerfilUsuario.js"></script>
+    <div class="perfil-box">
+        <h2>Editar perfil:</h2>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" placeholder="CPF" required>
+            <input type="tel" placeholder="Telefone" required>
+            <input type="text" placeholder="Endereço" required>
+
+            <label class="file-upload">
+                <input type="file" accept="image/*">
+                Foto de perfil
+            </label>
+
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+</body>
+
+</html>

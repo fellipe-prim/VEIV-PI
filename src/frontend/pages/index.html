@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal de Estágios</title>
+  <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img src="../imgs/logo.png" alt="Logo Estágio Verde">
+  </div>
+
+  <!-- Menu principal à direita -->
+  <nav class="header-right">
+    <a href="index.html">Início</a>
+    <a href="vagas.html">Vagas</a>
+    <a href="./cadastroEmpresas.html">Empresas</a>
+    <a href="./cadastroUsuarios.html">Usuários</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Conectando estudantes a oportunidades</h1>
+    <p>Busque estágios e inicie sua carreira de forma simples e rápida.</p>
+    <div class="search-row">
+      <input class="input" placeholder="Digite uma área ou cidade..." />
+      <button class="btn">Pesquisar</button>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <h2>Vagas em destaque</h2>
+  <div class="list">
+    <div class="card">
+      <h3>Estágio em TI</h3>
+      <div class="meta">São Paulo • 2 dias atrás</div>
+      <p>Atue com suporte e desenvolvimento de sistemas internos.</p>
+      <span class="pill">Estágio</span>
+    </div>
+    <div class="card">
+      <h3>Estagiário em Marketing</h3>
+      <div class="meta">Remoto • 5 dias atrás</div>
+      <p>Auxílio em campanhas digitais e gestão de redes sociais.</p>
+      <span class="pill">Remoto</span>
+    </div>
+  </div>
+</div>
+
+<!-- Popups -->
+<div id="aluno-login" class="popup hidden">
+  <div class="popup-content">
+    <h3>Login do Aluno</h3>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <button class="btn">Entrar</button>
+    <p>Ainda não tem conta? <a href="#" onclick="switchPopup('aluno-login','aluno-cadastro')">Cadastre-se</a></p>
+    <button class="close" onclick="closePopup('aluno-login')">Fechar</button>
+  </div>
+</div>
+
+<div id="aluno-cadastro" class="popup hidden">
+  <div class="popup-content">
+    <h3>Cadastro de Aluno</h3>
+    <input type="text" placeholder="Nome completo">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <!-- botão modificado -->
+    <button class="btn" onclick="cadastrarAluno()">Cadastrar</button>
+    <button class="close" onclick="closePopup('aluno-cadastro')">Fechar</button>
+  </div>
+</div>
+
+
+<div id="empresa-login" class="popup hidden">
+  <div class="popup-content">
+    <h3>Login da Empresa</h3>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <button class="btn">Entrar</button>
+    <p>Ainda não tem conta? <a href="#" onclick="switchPopup('empresa-login','empresa-cadastro')">Cadastre-se</a></p>
+    <button class="close" onclick="closePopup('empresa-login')">Fechar</button>
+  </div>
+</div>
+
+<div id="empresa-cadastro" class="popup hidden">
+  <div class="popup-content">
+    <h3>Cadastro de Empresa</h3>
+    <input type="text" placeholder="Nome da Empresa">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <!-- botão modificado -->
+    <button class="btn" onclick="cadastrarEmpresa()">Cadastrar</button>
+    <button class="close" onclick="closePopup('empresa-cadastro')">Fechar</button>
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <h4>Institucional</h4>
+      <a href="#">Sobre</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="mailto:contato@estagioverde.com">Email</a>
+      <a href="#">Telefone</a>
+    </div>
+    <div>
+      <h4>Redes Sociais</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+  <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

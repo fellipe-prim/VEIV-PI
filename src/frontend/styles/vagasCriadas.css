@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Botão de retorno */
+.botao_retorno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.botao_retorno:hover {
+  background: #333;
+}
+
+/* Título da página */
+.titulo {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Bloco de vaga */
+.bloco_vaga {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bloco_vaga h3 {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.bloco_vaga p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
