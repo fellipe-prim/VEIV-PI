@@ -99,3 +99,15 @@ body {
   color: #333;
   line-height: 1.4;
 }
+
+.cards-container .card {
+  display: block;       
+  text-decoration: none; 
+  color: inherit;       
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cards-container .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
