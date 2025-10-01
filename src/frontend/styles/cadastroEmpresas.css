@@ -9,11 +9,17 @@
 body {
   background: #f9f9f9;
   color: #111;
+  min-height: 100vh;
+}
+
+
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
 }
+
 
 /* Botão de retorno */
 .botao_retorno {
