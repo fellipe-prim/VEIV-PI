@@ -91,6 +91,9 @@ header .brand img {
   margin-bottom: 24px;
   color: #555;
 }
+.hero-content h1, .hero-content p{
+  color: white;
+}
 
 .search-row {
   display: flex;
