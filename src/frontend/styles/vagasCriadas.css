@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +5,26 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #f9f9f9;
-  color: #111;
-  min-height: 100vh;
+html, body {
+  height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9f9f9;
+  color: #111;
+}
 
 .main-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
 }
 
-/* Botão de retorno */
 .botao_retorno {
   display: inline-flex;
   align-items: center;
@@ -40,14 +44,12 @@ body {
   background: #333;
 }
 
-/* Título da página */
 .titulo {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 25px;
 }
 
-/* Bloco de vaga */
 .bloco_vaga {
   background: #fff;
   width: 100%;
@@ -71,4 +73,11 @@ body {
   font-size: 0.95rem;
   color: #333;
   line-height: 1.5;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
 }

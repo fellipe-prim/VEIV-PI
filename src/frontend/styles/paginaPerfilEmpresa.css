@@ -12,6 +12,11 @@ body {
   min-height: 100vh;
 }
 
+.option a {
+  text-decoration: none; 
+  color: #111; 
+  font: inherit; 
+}
 
 .main-container {
   display: flex;
