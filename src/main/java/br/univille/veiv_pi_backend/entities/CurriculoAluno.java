@@ -1,6 +1,5 @@
 package br.univille.veiv_pi_backend.entities;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -8,24 +7,25 @@ import jakarta.persistence.*;
 public class CurriculoAluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nome;
     private String sobre;
     private String habilidadesTecnicas;
     private String experienciaProfissional;
     private String previsaoDeConclusao;
-    private String Projetos;
+    private String projetos;
 
+    @OneToOne(mappedBy = "curriculo")
+    private Aluno aluno;
 
     public CurriculoAluno() {}
 
-    public CurriculoAluno(String nome, String sobre, String habilidadesTecnicas, String experienciaProfissional, String previsaoDeConclusao, String projetos) {
-        this.nome = nome;
-        this.sobre = sobre;
-        this.habilidadesTecnicas = habilidadesTecnicas;
-        this.experienciaProfissional = experienciaProfissional;
-        this.previsaoDeConclusao = previsaoDeConclusao;
-        Projetos = projetos;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -69,11 +69,18 @@ public class CurriculoAluno {
     }
 
     public String getProjetos() {
-        return Projetos;
+        return projetos;
     }
 
     public void setProjetos(String projetos) {
-        Projetos = projetos;
+        this.projetos = projetos;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 }
-

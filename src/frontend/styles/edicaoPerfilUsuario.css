@@ -1,0 +1,120 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  min-height: 100vh;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Botão de retorno */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+/* Caixa de formulário */
+.perfil-box {
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 35px 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.perfil-box h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Inputs e textarea */
+.perfil-box input[type="text"],
+.perfil-box input[type="email"],
+.perfil-box input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: #333;
+  transition: border 0.2s, box-shadow 0.2s;
+  margin-bottom: 5px;
+}
+
+.perfil-box input:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+/* Upload de foto */
+.file-upload {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #111;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.file-upload:hover {
+  background: #333;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* Botão */
+.perfil-box button {
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.perfil-box button:hover {
+  background: #333;
+}

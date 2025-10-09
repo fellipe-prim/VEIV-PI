@@ -1,11 +1,12 @@
 package br.univille.veiv_pi_backend.entities;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_empresa")
 public class Empresa {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,15 +17,17 @@ public class Empresa {
     private String telefone;
     private String endereco;
 
+    @OneToMany(mappedBy = "empresaEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<VagasEmpresa> vagas = new ArrayList<>();
 
-    public Empresa(){}
+    public Empresa() {}
 
-    public Empresa(String nomeEmpresa, String cnpj, String email, String telefone, String endereco) {
-        this.nomeEmpresa = nomeEmpresa;
-        this.cnpj = cnpj;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNomeEmpresa() {
@@ -65,5 +68,13 @@ public class Empresa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public List<VagasEmpresa> getVagas() {
+        return vagas;
+    }
+
+    public void setVagas(List<VagasEmpresa> vagas) {
+        this.vagas = vagas;
     }
 }

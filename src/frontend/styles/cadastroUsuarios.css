@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  min-height: 100vh;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.botao_retorno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.botao_retorno:hover {
+  background: #333;
+}
+
+/* Caixa de cadastro */
+.cadastro-box {
+  background: #fff;
+  padding: 40px 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.cadastro-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #111;
+}
+
+/* Inputs */
+.cadastro-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: #333;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.cadastro-box a{
+    text-align: center;
+}
+.cadastro-box input:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+/* Botão */
+.cadastro-box button {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cadastro-box button:hover {
+  background: #333;
+}

@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  min-height: 100vh;
+}
+
+.option a {
+  text-decoration: none; 
+  color: #111; 
+  font: inherit; 
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Botão de retorno */
+.botao_retorno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.botao_retorno:hover {
+  background: #333;
+}
+
+/* Perfil da empresa */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.foto_perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #111;
+}
+
+.nome_perfil {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Bloco de opções */
+.bloco_perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.option i {
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.option span {
+  font-size: 1rem;
+  color: #111;
+}
+
+.option:hover {
+  background: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}

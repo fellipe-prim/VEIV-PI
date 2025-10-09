@@ -1,7 +1,7 @@
 package br.univille.veiv_pi_backend.entities;
 
-
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_aluno")
@@ -10,6 +10,7 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nomeCompleto;
     private String cpf;
     private String telefone;
@@ -17,17 +18,22 @@ public class Aluno {
     private String endereco;
     private String curso;
 
-    public Aluno() {}
+    @OneToOne(mappedBy = "aluno", cascade = CascadeType.ALL)
+    private CurriculoAluno curriculo;
 
-    public Aluno(String nomeCompleto, String curso, String endereco, String email, String telefone, String cpf) {
-        this.nomeCompleto = nomeCompleto;
-        this.curso = curso;
-        this.endereco = endereco;
-        this.email = email;
-        this.telefone = telefone;
-        this.cpf = cpf;
+    @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL)
+    private List<VagasEmpresa> vagasEmprego;
+
+    public Aluno() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNomeCompleto() {
         return nomeCompleto;
@@ -75,5 +81,21 @@ public class Aluno {
 
     public void setCurso(String curso) {
         this.curso = curso;
+    }
+
+    public CurriculoAluno getCurriculo() {
+        return curriculo;
+    }
+
+    public void setCurriculo(CurriculoAluno curriculo) {
+        this.curriculo = curriculo;
+    }
+
+    public List<VagasEmpresa> getVagasEmprego() {
+        return vagasEmprego;
+    }
+
+    public void setVagasEmprego(List<VagasEmpresa> vagasEmprego) {
+        this.vagasEmprego = vagasEmprego;
     }
 }

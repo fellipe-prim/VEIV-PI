@@ -1,0 +1,83 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  min-height: 100vh;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Botão de retorno */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+/* Container principal */
+.container {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  padding: 35px 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Títulos */
+.container h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* Lista de candidatos */
+.lista-candidatos {
+  list-style: decimal inside;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.lista-candidatos li {
+  background: #f0f0f0;
+  padding: 10px 12px;
+  border-radius: 4px;
+}

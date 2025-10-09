@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhamento da Vaga</title>
+  <link rel="stylesheet" href="../styles/detalhe.css">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<header>
+ <body> 
+  <div class="brand">
+    <img src="../imgs/logo.png" alt="Logo Estágio Verde">
+  </div>
+  <nav class="header-right">
+    <a href="index.html">Início</a>
+    <a href="vagas.html">Vagas</a>
+    <a href="./cadastroEmpresas.html">Empresas</a>
+    <a href="./cadastroUsuarios.html">Usuários</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+<body>
+<div class="main-container">
+    
+  <!-- Botão de retorno -->
+  <a href="./vagas.html" class="botao_retorno"><i class="fa-solid fa-arrow-left"></i></a>
+
+  <div class="container">
+    <h2>Detalhamento da vaga</h2>
+
+    <p><strong>Vaga:</strong> <span id="vaga"></span></p>
+    <p><strong>Empresa:</strong> <span id="empresa"></span></p>
+    <p><strong>Área:</strong> <span id="area"></span></p>
+    <p><strong>Tipo de vaga:</strong> <span id="tipo"></span></p>
+    <p><strong>Local:</strong> <span id="local"></span></p>
+    <p><strong>Nível:</strong> <span id="nivel"></span></p>
+
+    <h3>Descrição da vaga:</h3>
+    <p id="descricao"></p>
+
+    <button class="btn">Candidate-se</button>
+  </div>
+
+  <script>
+
+    const vagas = {
+      suporte: {
+        vaga: "Analista de Suporte Técnico",
+        empresa: "Tech Solutions",
+        area: "Atendimento / Suporte",
+        tipo: "CLT – Integral",
+        local: "Joinville/SC",
+        nivel: "Pleno",
+        descricao: "Buscamos uma pessoa proativa, empática e comunicativa para integrar nosso time de Suporte Técnico."
+      },
+      dados: {
+        vaga: "Analista de Dados",
+        empresa: "DataCorp",
+        area: "Análise de Dados",
+        tipo: "Estágio – Meio período",
+        local: "Remoto",
+        nivel: "Júnior",
+        descricao: "Apoiar na coleta, tratamento e interpretação de dados estratégicos."
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const vagaId = params.get("vaga");
+
+    if (vagaId && vagas[vagaId]) {
+      const data = vagas[vagaId];
+      document.getElementById("vaga").textContent = data.vaga;
+      document.getElementById("empresa").textContent = data.empresa;
+      document.getElementById("area").textContent = data.area;
+      document.getElementById("tipo").textContent = data.tipo;
+      document.getElementById("local").textContent = data.local;
+      document.getElementById("nivel").textContent = data.nivel;
+      document.getElementById("descricao").textContent = data.descricao;
+    } else {
+      document.querySelector(".container").innerHTML = "<p>Vaga não encontrada.</p>";
+    }
+  </script>
+</div>
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <h4>Institucional</h4>
+      <a href="#">Sobre</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="mailto:contato@estagioverde.com">Email</a>
+      <a href="#">Telefone</a>
+    </div>
+    <div>
+      <h4>Redes Sociais</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+  <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
+</footer>
+</body>
+</html>
