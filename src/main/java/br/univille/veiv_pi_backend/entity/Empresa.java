@@ -1,4 +1,7 @@
-package br.univille.veiv_pi_backend.entities;
+package br.univille.veiv_pi_backend.entity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -15,6 +18,10 @@ public class Empresa {
     private String email;
     private String telefone;
     private String endereco;
+
+    @OneToMany(mappedBy = "empresaEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<VagasEmpresa> vagas = new ArrayList<>();
+
 
 
     public Empresa(){}

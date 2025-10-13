@@ -1,5 +1,7 @@
-package br.univille.veiv_pi_backend.entities;
+package br.univille.veiv_pi_backend.entity;
 
+
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -16,6 +18,13 @@ public class Aluno {
     private String email;
     private String endereco;
     private String curso;
+
+
+     @OneToOne(cascade = CascadeType.ALL)
+    private CurriculoAluno curriculo;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<VagasEmpresa> vagasEmprego;
 
     public Aluno() {}
 

@@ -1,4 +1,4 @@
-package br.univille.veiv_pi_backend.entities;
+package br.univille.veiv_pi_backend.entity;
 
 
 import jakarta.persistence.*;
@@ -16,6 +16,10 @@ public class VagasEmpresa {
     private String tituloVaga;
     private String endereco;
 
+    
+    @ManyToOne
+    @JoinColumn(name = "empresa_id")
+    private Empresa empresaEntity;
 
     public VagasEmpresa() {}
 

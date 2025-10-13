@@ -7,10 +7,10 @@ title: Diagrama de Entidades - Sistema de Currículos e Vagas
 ---
 
 classDiagram
-    Empresa "1" --> "*" VagaDeEmprego : oferece
-    Aluno "1" --> "1" Curriculo : possui
-    Aluno "1" --> "*" ContratoDeEmprego : celebra
-    VagaDeEmprego "*" --> "1" ContratoDeEmprego : gera
+    Empresa "1" --> "*" VagaDeEmprego 
+    Aluno "1" --> "1" Curriculo 
+    Aluno "1" --> "*" ContratoDeEmprego 
+    VagaDeEmprego "*" --> "1" ContratoDeEmprego
 
     namespace entity {
 

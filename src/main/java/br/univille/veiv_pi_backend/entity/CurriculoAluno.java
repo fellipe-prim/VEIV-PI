@@ -1,4 +1,4 @@
-package br.univille.veiv_pi_backend.entities;
+package br.univille.veiv_pi_backend.entity;
 
 
 import jakarta.persistence.*;
@@ -15,7 +15,9 @@ public class CurriculoAluno {
     private String experienciaProfissional;
     private String previsaoDeConclusao;
     private String Projetos;
-
+    
+    @OneToOne
+    private Aluno aluno;
 
     public CurriculoAluno() {}
 
