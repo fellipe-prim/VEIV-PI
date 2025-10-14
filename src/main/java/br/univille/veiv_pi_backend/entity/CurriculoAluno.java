@@ -21,13 +21,23 @@ public class CurriculoAluno {
 
     public CurriculoAluno() {}
 
-    public CurriculoAluno(String nome, String sobre, String habilidadesTecnicas, String experienciaProfissional, String previsaoDeConclusao, String projetos) {
+    public CurriculoAluno(long id, String nome, String sobre, String habilidadesTecnicas, String experienciaProfissional, String previsaoDeConclusao, String projetos, Aluno aluno) {
+        this.id = id;
         this.nome = nome;
         this.sobre = sobre;
         this.habilidadesTecnicas = habilidadesTecnicas;
         this.experienciaProfissional = experienciaProfissional;
         this.previsaoDeConclusao = previsaoDeConclusao;
         Projetos = projetos;
+        this.aluno = aluno;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -76,6 +86,14 @@ public class CurriculoAluno {
 
     public void setProjetos(String projetos) {
         Projetos = projetos;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 }
 
