@@ -1,16 +1,7 @@
-package br.univille.veiv_pi_backend.entity;
+package br.univille.veiv_pi_backend.DTO;
 
+public class AlunoDTO {
 
-import java.util.List;
-
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "tb_aluno")
-public class Aluno {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeCompleto;
     private String cpf;
@@ -19,27 +10,16 @@ public class Aluno {
     private String endereco;
     private String curso;
 
+    public AlunoDTO() {}
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private CurriculoAluno curriculo;
-
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<VagasEmpresa> vagasEmprego;
-
-
-
-    public Aluno() {}
-
-    public Aluno(Long id, List<VagasEmpresa> vagasEmprego, CurriculoAluno curriculo, String curso, String endereco, String email, String telefone, String cpf, String nomeCompleto) {
+    public AlunoDTO(Long id, String nomeCompleto, String cpf, String telefone, String email, String endereco, String curso) {
         this.id = id;
-        this.vagasEmprego = vagasEmprego;
-        this.curriculo = curriculo;
-        this.curso = curso;
-        this.endereco = endereco;
-        this.email = email;
-        this.telefone = telefone;
-        this.cpf = cpf;
         this.nomeCompleto = nomeCompleto;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
+        this.endereco = endereco;
+        this.curso = curso;
     }
 
     public Long getId() {
@@ -96,21 +76,5 @@ public class Aluno {
 
     public void setCurso(String curso) {
         this.curso = curso;
-    }
-
-    public CurriculoAluno getCurriculo() {
-        return curriculo;
-    }
-
-    public void setCurriculo(CurriculoAluno curriculo) {
-        this.curriculo = curriculo;
-    }
-
-    public List<VagasEmpresa> getVagasEmprego() {
-        return vagasEmprego;
-    }
-
-    public void setVagasEmprego(List<VagasEmpresa> vagasEmprego) {
-        this.vagasEmprego = vagasEmprego;
     }
 }
