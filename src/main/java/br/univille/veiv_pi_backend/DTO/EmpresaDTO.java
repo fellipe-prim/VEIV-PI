@@ -1,17 +1,7 @@
-package br.univille.veiv_pi_backend.entity;
+package br.univille.veiv_pi_backend.DTO;
 
-import java.util.ArrayList;
-import java.util.List;
+public class EmpresaDTO {
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "tb_empresa")
-public class Empresa {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeEmpresa;
     private String cnpj;
@@ -19,21 +9,15 @@ public class Empresa {
     private String telefone;
     private String endereco;
 
-    @OneToMany(mappedBy = "empresaEntity", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<VagasEmpresa> vagas = new ArrayList<>();
+    public EmpresaDTO(){}
 
-
-
-    public Empresa(){}
-
-    public Empresa(Long id, String nomeEmpresa, String cnpj, String email, String telefone, String endereco, List<VagasEmpresa> vagas) {
-        this.id = id;
-        this.nomeEmpresa = nomeEmpresa;
-        this.cnpj = cnpj;
-        this.email = email;
-        this.telefone = telefone;
+    public EmpresaDTO(String endereco, String telefone, String email, String cnpj, String nomeEmpresa, Long id) {
         this.endereco = endereco;
-        this.vagas = vagas;
+        this.telefone = telefone;
+        this.email = email;
+        this.cnpj = cnpj;
+        this.nomeEmpresa = nomeEmpresa;
+        this.id = id;
     }
 
     public Long getId() {
@@ -84,11 +68,4 @@ public class Empresa {
         this.endereco = endereco;
     }
 
-    public List<VagasEmpresa> getVagas() {
-        return vagas;
-    }
-
-    public void setVagas(List<VagasEmpresa> vagas) {
-        this.vagas = vagas;
-    }
 }

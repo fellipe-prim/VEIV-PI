@@ -46,7 +46,8 @@ public class CurriculoAlunoImpl implements CurriculoAlunoService {
         if (!curriculoAlunoRepository.existsById(id)){
             throw new RuntimeException("id nao encontrado");
 
-        }curriculoAlunoRepository.deleteById(id);
+        }
+        curriculoAlunoRepository.deleteById(id);
 
     }
 

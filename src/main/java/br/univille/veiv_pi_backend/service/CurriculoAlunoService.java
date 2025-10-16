@@ -1,7 +1,5 @@
 package br.univille.veiv_pi_backend.service;
-
 import br.univille.veiv_pi_backend.DTO.CurriculoAlunoDTO;
-import br.univille.veiv_pi_backend.entity.CurriculoAluno;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
