@@ -1,6 +1,4 @@
 package br.univille.veiv_pi_backend.controller;
-
-
 import br.univille.veiv_pi_backend.DTO.CurriculoAlunoDTO;
 import br.univille.veiv_pi_backend.service.CurriculoAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/v1/curriculos")
 public class CurriculoAlunoController {
 
     @Autowired
