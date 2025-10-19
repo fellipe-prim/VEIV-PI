@@ -10,6 +10,6 @@ public interface AlunoService {
     AlunoDTO update (Long id, AlunoDTO dto);
     void delete (Long id);
 
-    Page findAll(Pageable pageable);
+    Page <AlunoDTO> findAll(Pageable pageable);
     AlunoDTO findById(Long id);
 }

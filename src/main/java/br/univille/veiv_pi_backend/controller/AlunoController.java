@@ -13,7 +13,8 @@ public class AlunoController {
 
     @Autowired
     private AlunoService alunoService;
-
+    
+    @GetMapping
     public ResponseEntity<Page<AlunoDTO>> findAll( Pageable pageable) {
         Page<AlunoDTO> dto = alunoService.findAll(pageable);
         return ResponseEntity.ok(dto);
