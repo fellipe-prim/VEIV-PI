@@ -26,26 +26,24 @@ public class AlunoController {
         return ResponseEntity.ok(dto);
     }
 
-    @PostMapping(value = "/{id}")
+    // --- CORREÇÃO AQUI ---
+    // Removido o (value = "/{id}")
+    // Agora ele responde ao POST em /api/v1/alunos
+    @PostMapping 
     public ResponseEntity<AlunoDTO> insert(@RequestBody AlunoDTO dto){
-
         dto = alunoService.insert(dto);
         return ResponseEntity.ok(dto);
     }
+
     @PutMapping(value = "/{id}")
     public ResponseEntity<AlunoDTO> update (@PathVariable Long id,@RequestBody AlunoDTO dto){
         AlunoDTO atualizado = alunoService.update(id,dto);
         return ResponseEntity.ok(atualizado);
     }
+
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void>delete (@PathVariable Long id){
         alunoService.delete(id);
         return ResponseEntity.noContent().build();
-
     }
-
-
-    
-
-
 }
