@@ -1,0 +1,32 @@
+### GET Todas as Empresas
+GET http://localhost:8080/api/v1/empresas
+Content-Type: application/json
+
+### POST Nova Empresa
+POST http://localhost:8080/api/v1/empresas
+Content-Type: application/json
+
+{
+  "nomeEmpresa": "Tech Solutions LTDA",
+  "cnpj": "12.345.678/0001-90",
+  "email": "contato@techsolutions.com.br",
+  "telefone": "(11) 98765-4321",
+  "endereco": "Rua Fictícia, 123, São Paulo"
+}
+
+### PUT Atualizar Empresa 
+PUT http://localhost:8080/api/v1/empresas/1
+Content-Type: application/json
+
+{
+  "nomeEmpresa": "Tech Solutions - Nome Atualizado",
+  "cnpj": "12.345.678/0001-90",
+  "email": "contato.novo@techsolutions.com.br",
+  "telefone": "(11) 99999-9999",
+  "endereco": "Avenida Principal, 456, São Paulo"
+}
+
+### DELETE Empresa
+DELETE http://localhost:8080/api/v1/empresas/1
+Content-Type: application/json
+

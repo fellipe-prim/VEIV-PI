@@ -1,0 +1,37 @@
+### GET todos curriculos
+GET http://localhost:8080/api/v1/curriculos
+Content-Type: application/json
+
+### GET curriculos
+GET http://localhost:8080/api/v1/curriculos/1
+Content-Type: application/json
+
+### POST curriculos
+POST http://localhost:8080/api/v1/curriculos
+Content-Type: application/json
+
+{
+  "nome": "Lucas Almeida",
+  "sobre": "Estudante de Engenharia de Software no 5º semestre.",
+  "habilidadesTecnicas": "Java, Spring, Python, SQL",
+  "experienciaProfissional": "Estágio de 6 meses na Empresa Y.",
+  "previsaoDeConclusao": "2027/2",
+  "projetos": "Sistema de gerenciamento de biblioteca em Java."
+}
+
+### ATUALIUZAR curriculos
+PUT http://localhost:8080/api/v1/curriculos/1
+Content-Type: application/json
+
+{
+  "nome": "Lucas Almeida (Atualizado)",
+  "sobre": "Estudante de Engenharia de Software no 6º semestre, buscando novas oportunidades.",
+  "habilidadesTecnicas": "Java, Spring Boot, Angular, PostgreSQL, Docker",
+  "experienciaProfissional": "Estágio de 6 meses na Empresa Y.",
+  "previsaoDeConclusao": "2027/2",
+  "projetos": "Sistema de gerenciamento de biblioteca em Java e App de finanças pessoais."
+}
+
+### DELETE curriculos 
+DELETE http://localhost:8080/api/v1/curriculos/1
+Content-Type: application/json

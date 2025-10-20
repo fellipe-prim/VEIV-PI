@@ -1,0 +1,33 @@
+### GET Alunos
+GET http://localhost:8080/api/v1/alunos
+Content-Type: application/json
+
+### POST Alunos
+POST http://localhost:8080/api/v1/alunos
+Content-Type: application/json
+
+{
+  "nomeCompleto": "Lucas Almeida",
+  "cpf": "123.456.789-00",
+  "telefone": "(11) 98765-4321",
+  "email": "lucas.almeida@gmail.com",
+  "endereco": "Rua X, 123, São Paulo",
+  "curso": "Engenharia de Software"
+}
+
+### PUT Alunos
+PUT http://localhost:8080/api/v1/alunos/1
+Content-Type: application/json
+
+{
+  "nomeCompleto": "Lucas Almeida",
+  "cpf": "123.456.789-00",
+  "telefone": "(11) 98765-4321",
+  "email": "lucas.almeida@gmail.com",
+  "endereco": "Rua X, 123, São Paulo",
+  "curso": "Engenharia de Software"
+}
+
+### DELETE Alunos
+DELETE http://localhost:8080/api/v1/alunos/1
+Content-Type: application/json
