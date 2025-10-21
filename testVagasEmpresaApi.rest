@@ -1,0 +1,32 @@
+### GET Todas as Empresas
+GET http://localhost:8080/api/v1/vagasEmpresa
+Content-Type: application/json
+
+### GET por id
+GET http://localhost:8080/api/v1/vagasEmpresas/1
+Content-Type: application/json"
+
+### POST Nova Empresa
+POST http://localhost:8080/api/v1/vagasEmpresa
+Content-Type: application/json
+
+{
+  "empresa": "aasa",
+  "descricao": "asasa",
+  "requisitos": "asdasd",
+  "tituloVaga": "sadasd",
+  "endereco": "asdasa"
+}
+
+### PUT Atualizar Empresa 
+PUT http://localhost:8080/api/v1/vagasEmpresa/1
+Content-Type: application/json
+
+{
+  "empresa": "a"
+}
+
+### DELETE Empresa
+DELETE http://localhost:8080/api/v1/vagasEmpresa/1
+Content-Type: application/json
+

@@ -23,13 +23,12 @@ public class VagasEmpresa {
 
     public VagasEmpresa() {}
 
+    public Long getId() {
+        return id;
+    }
 
-    public VagasEmpresa(String empresa, String tituloVaga, String endereco, String requisitos, String descricao) {
-        this.empresa = empresa;
-        this.tituloVaga = tituloVaga;
-        this.endereco = endereco;
-        this.requisitos = requisitos;
-        this.descricao = descricao;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmpresa() {
@@ -71,4 +70,15 @@ public class VagasEmpresa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+    public Empresa getEmpresaEntity() {
+        return empresaEntity;
+    }
+
+    public void setEmpresaEntity(Empresa empresaEntity) {
+        this.empresaEntity = empresaEntity;
+    }
+
+
+    
 }

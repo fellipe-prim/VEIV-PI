@@ -94,11 +94,3 @@ public class CurriculoAlunoImpl implements CurriculoAlunoService {
     }
 
 }
-
-//private long id;
-//    private String nome;
-//    private String sobre;
-//    private String habilidadesTecnicas;
-//    private String experienciaProfissional;
-//    private String previsaoDeConclusao;
-//    private String Projetos;

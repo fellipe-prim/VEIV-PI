@@ -26,9 +26,7 @@ public class AlunoController {
         return ResponseEntity.ok(dto);
     }
 
-    // --- CORREÇÃO AQUI ---
-    // Removido o (value = "/{id}")
-    // Agora ele responde ao POST em /api/v1/alunos
+  
     @PostMapping 
     public ResponseEntity<AlunoDTO> insert(@RequestBody AlunoDTO dto){
         dto = alunoService.insert(dto);

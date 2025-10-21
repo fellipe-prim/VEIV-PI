@@ -65,7 +65,7 @@ public class AlunoServiceImpl implements AlunoService {
         aluno.setCpf(dto.getCpf());
         aluno.setTelefone(dto.getTelefone());
         aluno.setEmail(dto.getEmail());
-        aluno.setEndereco(dto.getEndereco()); // <-- CORREÇÃO 2 APLICADA
+        aluno.setEndereco(dto.getEndereco());
         aluno.setCurso(dto.getCurso());
         return aluno;
     }
@@ -79,10 +79,3 @@ public class AlunoServiceImpl implements AlunoService {
         aluno.setCurso(dto.getCurso());
     }
 }
-//    private Long id;
-//    private String nomeCompleto;
-//    private String cpf;
-//    private String telefone;
-//    private String email;
-//    private String endereco;
-//    private String curso;

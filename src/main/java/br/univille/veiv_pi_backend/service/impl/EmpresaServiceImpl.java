@@ -85,9 +85,3 @@ public class EmpresaServiceImpl implements EmpresaService {
 
     }
 }
-//    private Long id;
-//    private String nomeEmpresa;
-//    private String cnpj;
-//    private String email;
-//    private String telefone;
-//    private String endereco;
