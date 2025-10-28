@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
   async function fetchVagas() {
     try {
-      const response = await fetch("http://localhost:3000/vagas"); 
+      const response = await fetch("http://localhost:8080/api/v1/vagasEmpresa"); 
       //if (!response.ok) throw new Error("Erro ao carregar vagas");
 
       const vagas = await response.json();

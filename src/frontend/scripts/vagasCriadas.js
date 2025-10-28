@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
   
-    const response = await fetch("http://localhost:8080/vagas-criadas");
+    const response = await fetch("http://localhost:8080/api/v1/vagasEmpresas/1");
     if (!response.ok) throw new Error("Erro ao buscar vagas criadas");
 
     const vagas = await response.json();

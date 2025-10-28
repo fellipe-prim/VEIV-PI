@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        const response = await fetch("http://localhost:3000/curriculos", {
+        const response = await fetch("http://localhost:8080/api/v1/curriculos", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
