@@ -2,11 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".formulario");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); 
-
+    e.preventDefault();
 
     const dados = {
-      nome: form.querySelector('input[placeholder="Nome da empresa"]').value,
+      nomeEmpresa: form.querySelector('input[placeholder="Nome da empresa"]').value,
       email: form.querySelector('input[placeholder="E-mail"]').value,
       telefone: form.querySelector('input[placeholder="Telefone"]').value,
       endereco: form.querySelector('input[placeholder="Endereço"]').value,
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-     
       const response = await fetch("http://localhost:8080/api/v1/empresas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
