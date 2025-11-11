@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,37 +10,14 @@ body {
   background: #f9f9f9;
   color: #111;
   min-height: 100vh;
-}
-
-
-.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-/* Botão de retorno */
-.botao_retorno {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-decoration: none;
-  background: #111;
-  color: #fff;
-  margin-bottom: 20px;
-  transition: 0.3s;
+  align-items: center;
+  padding: 20px;
 }
 
-.botao_retorno:hover {
-  background: #333;
-}
-
-/* Caixa de login */
-.login-box {
+/* Container do login */
+#loginForm {
   background: #fff;
   padding: 40px 30px;
   border: 1px solid #ddd;
@@ -51,22 +28,14 @@ body {
   text-align: center;
 }
 
-.login-box h2 {
+#loginForm h2 {
   margin-bottom: 20px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #111;
 }
 
-/* Labels e inputs */
-.login-box label {
-  display: block;
-  text-align: left;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.login-box input {
+/* Inputs */
+#loginForm input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -78,14 +47,14 @@ body {
   transition: border 0.2s, box-shadow 0.2s;
 }
 
-.login-box input:focus {
+#loginForm input:focus {
   border-color: #111;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
   outline: none;
 }
 
 /* Botão */
-.login-box button {
+#loginForm button {
   width: 100%;
   padding: 12px;
   background: #111;
@@ -98,28 +67,21 @@ body {
   transition: background 0.3s;
 }
 
-.login-box button:hover {
+#loginForm button:hover {
   background: #333;
 }
 
-/* Links */
-.login-box a {
-  display: block;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  color: #111;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.login-box a:hover {
-  color: #555;
-}
-
-/* Rodapé */
-.footer-text {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #666;
+/* Mensagem de erro/sucesso */
+#mensagem {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
   text-align: center;
+}
+
+/* Pequenos ajustes para mobile */
+@media (max-width: 420px) {
+  #loginForm {
+    padding: 30px 20px;
+  }
 }

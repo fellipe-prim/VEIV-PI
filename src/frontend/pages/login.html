@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Login H2</title>
+  <link rel="stylesheet" href="../..//frontend/styles/login.css">
 </head>
+
 <body>
-  <h2>Login</h2>
   <form id="loginForm">
+    <h2>Login</h2>
     <input type="email" id="email" placeholder="Email" required><br><br>
     <input type="password" id="senha" placeholder="Senha" required><br><br>
     <button type="submit">Entrar</button>
@@ -14,27 +17,44 @@
   <p id="mensagem"></p>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = document.getElementById('email').value;
-      const senha = document.getElementById('senha').value;
 
-      const resposta = await fetch('http://localhost:8080/login', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ email, senha })
-      });
-
-      const result = await resposta.json();
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value.trim();
       const msg = document.getElementById('mensagem');
-      if (result.success) {
-        msg.textContent = "✅ Login bem-sucedido!";
-        msg.style.color = "green";
-      } else {
-        msg.textContent = "❌ Email ou senha incorretos.";
-        msg.style.color = "red";
+
+      // Verifica se os campos foram preenchidos
+      if (!email || !senha) {
+        msg.textContent = "⚠️ Preencha todos os campos.";
+        msg.style.color = "orange";
+        return;
       }
+
+      // Lista de palavras que indicam empresas
+    const palavrasEmpresas = [
+      "@empresas", "@empresa", "@emprsa", "@empres", "@emprsas",
+      "@emspresas", "@empsreas", "@emmepresas", "@empresass", "@empresaas",
+      "@dnpresas", "@emrpesas", "@empresw", "@empr", "@emp",
+      "@empsa", "@emprsa", "@empresz", "@emprssa", "@empresaa"
+    ];
+
+      msg.textContent = "⏳ Verificando...";
+      msg.style.color = "blue";
+
+      setTimeout(() => {
+        if (palavrasEmpresas.some(palavra => email.includes(palavra))) {
+          msg.textContent = "✅ Login bem-sucedido (empresa)!";
+          msg.style.color = "green";
+          window.location.href = "./paginaPerfilEmpresa.html";
+        } else {
+          msg.textContent = "✅ Login bem-sucedido (usuário)!";
+          msg.style.color = "green";
+          window.location.href = "./paginaPerfilUsuario.html";
+        }
+      }, 800);
     });
   </script>
 </body>
+
 </html>
