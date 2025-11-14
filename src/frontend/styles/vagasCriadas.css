@@ -74,6 +74,41 @@ body {
   color: #333;
   line-height: 1.5;
 }
+.acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.acoes button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.acoes .ver {
+  background: #1e90ff;
+  color: white;
+}
+.acoes .ver:hover { background: #0f6cd0; }
+
+.acoes .editar {
+  background: #ffaa00;
+  color: black;
+}
+.acoes .editar:hover { background: #e09500; }
+
+.acoes .excluir {
+  background: #d9534f;
+  color: white;
+}
+.acoes .excluir:hover { background: #b52b27; }
 
 footer {
   background: #111;
