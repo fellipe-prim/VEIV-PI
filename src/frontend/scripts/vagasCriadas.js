@@ -1,38 +1,37 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const container = document.querySelector("body");
+  const listaVagas = document.getElementById("listaVagas");
 
   try {
-  
-    const response = await fetch("http://localhost:8080/api/v1/vagasEmpresas/1");
-    if (!response.ok) throw new Error("Erro ao buscar vagas criadas");
+    const response = await fetch("http://localhost:8080/api/v1/vagasEmpresa");
+    
+    if (!response.ok) {
+      throw new Error("Erro ao buscar vagas");
+    }
 
     const vagas = await response.json();
 
-   
-    const titulo = document.querySelector(".titulo");
+    if (vagas.length === 0) {
+      listaVagas.innerHTML = `<p>Nenhuma vaga cadastrada ainda.</p>`;
+      return;
+    }
 
-
-    const vagasContainer = document.createElement("div");
-    vagasContainer.classList.add("vagas-container");
-
-  
     vagas.forEach(vaga => {
-      const bloco = document.createElement("div");
-      bloco.classList.add("bloco_vaga");
+      const div = document.createElement("div");
+      div.classList.add("bloco_vaga");
 
-      bloco.innerHTML = `
-        <h3>${vaga.titulo}</h3>
-        <p><strong>Descrição da vaga:</strong> ${vaga.descricao}</p>
+      div.innerHTML = `
+        <h3>${vaga.tituloVaga}</h3>
+        <p><strong>Empresa:</strong> ${vaga.empresa}</p>
+        <p><strong>Endereço:</strong> ${vaga.endereco}</p>
+        <p><strong>Requisitos:</strong> ${vaga.requisitos}</p>
+        <p><strong>Descrição:</strong> ${vaga.descricao}</p>
       `;
 
-      vagasContainer.appendChild(bloco);
+      listaVagas.appendChild(div);
     });
 
-
-    titulo.insertAdjacentElement("afterend", vagasContainer);
-
   } catch (error) {
-    console.error("Erro:", error);
-    container.insertAdjacentHTML("beforeend", "<p>Não foi possível carregar as vagas criadas.</p>");
+    console.error("Erro ao carregar vagas:", error);
+    listaVagas.innerHTML = `<p>❌ Erro ao carregar vagas do servidor.</p>`;
   }
 });
