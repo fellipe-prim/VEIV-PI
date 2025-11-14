@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/vagasCriadas.css">
+
+  <title>Editar Vaga</title>
+</head>
+
+<body>
+<header>
+  <div class="brand">
+    <img src="../imgs/logo.png" alt="Logo Estágio Verde">
+  </div>
+  <nav class="header-right">
+    <a href="index.html">Início</a>
+    <a href="vagas.html">Vagas</a>
+    <a href="cadastroEmpresas.html">Empresas</a>
+    <a href="cadastroUsuarios.html">Usuários</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<div class="main-container">
+  <a href="./vagasCriadas.html" class="botao_retorno"><i class="fa-solid fa-arrow-left"></i></a>
+
+  <h2 class="titulo">Editar vaga</h2>
+
+  <form id="formEditar" class="form-container">
+    <label>Título</label>
+    <input type="text" id="tituloVaga" required>
+
+    <label>Empresa</label>
+    <input type="text" id="empresa" required>
+
+    <label>Endereço</label>
+    <input type="text" id="endereco">
+
+    <label>Requisitos</label>
+    <textarea id="requisitos" rows="3"></textarea>
+
+    <label>Descrição</label>
+    <textarea id="descricao" rows="4"></textarea>
+
+    <button type="submit" class="btn salvar">Salvar alterações</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <h4>Institucional</h4>
+      <a href="#">Sobre</a>
+      <a href="#">Política</a>
+    </div>
+  </div>
+  <p class="copy">© 2025 START ESTÁGIO</p>
+</footer>
+
+<script src="../scripts/editarVaga.js"></script>
+</body>
+</html>

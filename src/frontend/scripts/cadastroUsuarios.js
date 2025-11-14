@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cpf: form.querySelector('input[placeholder="CPF"]').value,
       telefone: form.querySelector('input[placeholder="Telefone"]').value,
       endereco: form.querySelector('input[placeholder="Endereço"]').value,
-      curso: document.getElementById('input[placeholder="Curso"]').value
+      curso: form.querySelector('input[placeholder="Curso"]').value
     };
 
     try {
