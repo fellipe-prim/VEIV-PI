@@ -25,25 +25,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Botão de retorno */
-.botao_retorno {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  text-decoration: none;
-  background: #111;
-  color: #fff;
-  margin-bottom: 25px;
-  font-size: 1.2rem;
-  transition: background 0.3s;
-}
-
-.botao_retorno:hover {
-  background: #333;
-}
 
 /* Perfil da empresa */
 .perfil {

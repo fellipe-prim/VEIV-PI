@@ -1,0 +1,449 @@
+/* ============================
+   RESET E BASE
+   ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.brand img {
+  height: 50px;
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 6px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.header-right a:hover,
+.header-right a:focus {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* utility button style (reused) */
+.btn-link {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-link:hover {
+  background: white;
+  color: #111;
+}
+
+/* ============================
+   HERO
+   ============================ */
+.hero {
+  position: relative;
+  background: transparent;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden; /* evita sobras */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../imgs/EstudantesUni.jpg") center center / cover no-repeat;
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+.hero.small-hero {
+  padding: 60px 20px;
+  min-height: 160px;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  color: #eee;
+}
+
+.search-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+/* primary button */
+.btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #333;
+}
+
+/* ============================
+   MAIN CONTENT (WRAP)
+   ============================ */
+.wrap {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.wrap h2 {
+  margin-bottom: 20px;
+  color: #111;
+  font-size: 1.5rem;
+}
+
+/* CARD GRID */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 22px;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #111;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.card .meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.card p {
+  margin-bottom: 14px;
+  color: #444;
+}
+
+.pill {
+  display: inline-block;
+  background: #111;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* ============================
+   POPUPS / MODALS
+   ============================ */
+.hidden {
+  display: none !important;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 60;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.popup-content h3 {
+  color: #111;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-content .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* CLOSE BUTTON */
+.close {
+  margin-top: 12px;
+  background: #eee;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.close:hover {
+  background: #ddd;
+}
+
+/* ============================
+   FAQ (ACORDÉON)
+   ============================ */
+.faq-container {
+  max-width: 900px;
+  margin: 30px auto 70px;
+  padding: 0 20px;
+}
+
+/* each item */
+.faq-item {
+  border: 1px solid #e9e9e9;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* question button */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 16px;
+  font-size: 1rem;
+  background: linear-gradient(180deg,#f8f8f8,#f5f5f5);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #111;
+}
+
+.faq-question::after {
+  content: "+";
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform .18s ease;
+}
+
+/* rotate when active */
+.faq-question.active::after {
+  content: "–";
+  transform: rotate(180deg);
+}
+
+/* answer area - collapse via max-height transition for smoothness */
+.faq-answer {
+  padding: 0 16px;
+  background: #fff;
+  color: #444;
+  line-height: 1.55;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .28s ease, padding .18s ease;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* when active (JS toggles .active on button) */
+.faq-question.active + .faq-answer {
+  padding: 16px;
+  max-height: 600px; /* large enough to show content */
+}
+
+/* small typography inside answer */
+.faq-answer p {
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+footer a {
+  display: block;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.2s;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 12px 18px;
+  }
+
+  .brand img {
+    height: 44px;
+  }
+
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .wrap { margin: 30px auto; }
+  .faq-container { margin: 24px auto; }
+  .popup-content { padding: 20px; max-width: 92%; }
+}
+
+@media (max-width: 520px) {
+  .header-right {
+    gap: 10px;
+    font-size: 14px;
+  }
+  .search-row { flex-direction: column; padding: 0 12px; }
+  .input { width: 100%; }
+  .btn { width: 100%; }
+  .card { padding: 16px; }
+  .faq-question { padding: 14px; font-size: 0.98rem; }
+}
+
+.faq-question:focus {
+  outline: 3px solid rgba(17,17,17,0.12);
+  outline-offset: 2px;
+}
+
+a:focus {
+  outline: 3px solid rgba(17,17,17,0.12);
+  outline-offset: 2px;
+}
+
+.header-right a.active {
+  color: #ff751f;
+  font-weight: bold;
+}

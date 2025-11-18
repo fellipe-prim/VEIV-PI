@@ -3,27 +3,59 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #f9f9f9;
-  color: #111;
+  background: #fff;
+  color: #222;
   min-height: 100vh;
+}
+
+/* Header igual ao index */
+header {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+}
+
+header .brand img {
+  height: 42px;
+  filter: brightness(0) invert(1);
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 22px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.header-right a:hover {
+  opacity: 0.8;
+}
+
+/* Centralização do login */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 60px 20px;
+  min-height: 70vh;
 }
 
-/* Container do login */
+/* Formulário */
 #loginForm {
   background: #fff;
   padding: 40px 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: center;
 }
@@ -58,30 +90,61 @@ body {
   width: 100%;
   padding: 12px;
   background: #111;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 #loginForm button:hover {
   background: #333;
 }
 
-/* Mensagem de erro/sucesso */
+/* Mensagem */
 #mensagem {
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 0.95rem;
   font-weight: 500;
-  text-align: center;
 }
 
-/* Pequenos ajustes para mobile */
-@media (max-width: 420px) {
-  #loginForm {
-    padding: 30px 20px;
-  }
+/* Footer igual ao index */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  display: block;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
 }

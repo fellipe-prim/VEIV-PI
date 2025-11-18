@@ -1,73 +1,105 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="../styles/index.css">
-  <title>pagina_perfil_empresa</title>
+  <link rel="stylesheet" href="../styles/paginaPerfilEmpresa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Scripts -->
+  <script src="../scripts/paginaPefilEmpresa.js" defer></script>
+
+  <title>Perfil da Empresa</title>
 </head>
-<header>
- <body> 
-  <div class="brand">
-    <img src="../imgs/logo.png" alt="Logo Estágio Verde">
-  </div>
-  <nav class="header-right">
-    <a href="index.html">Início</a>
-    <a href="vagas.html">Vagas</a>
-    <a href="./cadastroEmpresas.html">Empresas</a>
-    <a href="./cadastroUsuarios.html">Usuários</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-</header>
+
 <body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <img src="../imgs/logo.png" alt="Logo Estágio Verde">
+    </div>
+
+    <nav class="header-right">
+      <a href="index.html">Início</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="./cadastroEmpresas.html" class="active"><strong>Empresas</strong></a>
+      <a href="./cadastroUsuarios.html">Usuários</a>
+      <a href="contato.html">Contato</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
   <div class="main-container">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/paginaPerfilEmpresa.css">
-    <script src="../scripts/paginaPefilEmpresa.js"></script>
-    <a href="#" class="botao_retorno"><i class="fa-solid fa-arrow-left"></i></a>
-  
+
     <div class="perfil">
-      <img src="#" class="foto_perfil">
+      <img src="#" class="foto_perfil" alt="Foto da empresa">
       <span class="nome_perfil">Empresa</span>
     </div>
-  
+
     <div class="bloco_perfil">
+
+      <!-- BOTÃO: Vagas criadas -->
       <div class="option">
         <i class="fa-solid fa-file"></i>
-        <span><a href="./vagasCriadas.html">Vagas criadas</a></span>
+        <span>
+          <a href="./vagasCriadas.html">Vagas criadas</a>
+        </span>
       </div>
+
+      <!-- BOTÃO: Criar nova vaga -->
       <div class="option">
         <i class="fa-solid fa-file-circle-plus"></i>
-        <span><a href="./criarVaga.html">Criar nova vaga</a></span>
+        <span>
+          <a href="./cadastroVaga.html">Criar nova vaga</a>
+        </span>
       </div>
+
+      <!-- BOTÃO: Candidatos -->
       <div class="option">
         <i class="fa-solid fa-people-group"></i>
-        <span><a href="./candidatos.html">Candidatos</a></span>
+        <span>
+          <a href="./candidatos.html">Candidatos</a>
+        </span>
       </div>
+
     </div>
-</div>
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <h4>Institucional</h4>
-      <a href="#">Sobre</a>
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Termos de Uso</a>
-    </div>
-    <div>
-      <h4>Contato</h4>
-      <a href="mailto:contato@estagioverde.com">Email</a>
-      <a href="#">Telefone</a>
-    </div>
-    <div>
-      <h4>Redes Sociais</h4>
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-    </div>
+
   </div>
-  <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
-</footer>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrap">
+
+      <div>
+        <h4>Institucional</h4>
+        <a href="#">Sobre</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <a href="mailto:contato@estagioverde.com">Email</a>
+        <a href="#">Telefone</a>
+      </div>
+
+      <div>
+        <h4>Redes Sociais</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+
+    </div>
+
+    <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
+  </footer>
+
 </body>
 </html>

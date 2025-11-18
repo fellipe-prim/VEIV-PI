@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ – Portal de Estágios</title>
+  <link rel="stylesheet" href="../styles/faq.css">
+</head>
+
+<body>
+<header>
+  <div class="brand">
+    <img src="../imgs/logo.png" alt="Logo Estágio Verde">
+  </div>
+
+  <nav class="header-right">
+    <a href="index.html">Início</a>
+    <a href="vagas.html">Vagas</a>
+    <a href="./cadastroEmpresas.html">Empresas</a>
+    <a href="./cadastroUsuarios.html">Usuários</a>
+    <a href="contato.html">Contato</a>
+    <a href="faq.html" class="active"><strong>FAQ</strong></a>
+  </nav>
+</header>
+
+<section class="hero small-hero">
+  <div class="hero-content">
+    <h1>Perguntas Frequentes</h1>
+    <p>Encontre respostas rápidas sobre o uso do Portal de Estágios.</p>
+  </div>
+</section>
+
+<div class="wrap faq-container">
+
+  <h2>Dúvidas gerais</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">Como faço para me cadastrar como estudante?</button>
+    <div class="faq-answer">
+      <p>Basta acessar o menu “Usuários”, selecionar “Cadastrar”, preencher seus dados e criar sua conta gratuitamente.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">É cobrado algum valor para usar o portal?</button>
+    <div class="faq-answer">
+      <p>Não. O uso do portal é totalmente gratuito tanto para estudantes quanto para empresas cadastrarem vagas.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Como encontro vagas de estágio?</button>
+    <div class="faq-answer">
+      <p>No menu “Vagas”, você pode filtrar por área, cidade ou tipo de contrato para encontrar oportunidades compatíveis com seu perfil.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Posso me candidatar diretamente pelo portal?</button>
+    <div class="faq-answer">
+      <p>Sim. Ao acessar uma vaga, basta clicar em “Candidatar-se”. Você será direcionado para enviar seu currículo à empresa.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Como as empresas publicam vagas?</button>
+    <div class="faq-answer">
+      <p>As empresas devem acessar a área “Empresas”, criar uma conta e, em seguida, utilizar o painel de publicação de vagas.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Meus dados estão seguros?</button>
+    <div class="faq-answer">
+      <p>Sim. O portal segue práticas de segurança e nossa <strong>Política de Privacidade</strong> descreve como tratamos as informações dos usuários.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <h4>Institucional</h4>
+      <a href="#">Sobre</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="mailto:contato@estagioverde.com">Email</a>
+      <a href="#">Telefone</a>
+    </div>
+    <div>
+      <h4>Redes Sociais</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+  <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
+</footer>
+
+<script>
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>

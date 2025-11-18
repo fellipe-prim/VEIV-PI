@@ -1,4 +1,18 @@
 /* Reset e base */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-container {
+    flex: 1;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -23,8 +37,7 @@ header {
 }
 
 header .brand img {
-  height: 42px;
-  filter: brightness(0) invert(1); /* deixa logo clara em fundo escuro */
+  height: 50px;
 }
 
 .header-left {
@@ -265,4 +278,9 @@ footer a:hover {
   text-align: center;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+.header-right a.active {
+  color: #ff751f;
+  font-weight: bold;
 }

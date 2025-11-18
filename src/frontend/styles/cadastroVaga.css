@@ -95,3 +95,8 @@ body {
 .formulario button:hover {
   background: #333;
 }
+
+.header-right a.active {
+  color: #ff751f;
+  font-weight: bold;
+}

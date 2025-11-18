@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/vagasCriadas.css">
   <link rel="stylesheet" href="../styles/index.css">
+
   <title>Vagas Criadas</title>
 </head>
-<header>
+
+<body>
+  <header>
     <div class="brand">
       <img src="../imgs/logo.png" alt="Logo Estágio Verde">
     </div>
@@ -17,19 +21,19 @@
       <a href="index.html">Início</a>
       <a href="vagas.html">Vagas</a>
       <a href="./cadastroEmpresas.html">Empresas</a>
-      <a href="./cadastroUsuarios.html">Usuários</a>
+      <a href="./cadastroUsuarios.html">Usuarios</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
-<body>
+
   <div class="main-container">
-    <a href="./index.html" class="botao_retorno"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="./paginaPerfilEmpresa.html" class="botao_retorno"><i class="fa-solid fa-arrow-left"></i></a>
+
     <h2 class="titulo">Vagas criadas:</h2>
-    <div class="bloco_vaga">
-      <h3>Analista de suporte técnico - Atendimento ao Cliente</h3>
-      <p><strong>Descrição da vaga:</strong> Buscamos uma pessoa proativa, empática e comunicativa para integrar nosso time de Suporte Técnico e Atendimento ao Cliente.</p>
-    </div>
+
+    <div id="listaVagas" class="lista-vagas"></div>
   </div>
+
   <footer>
     <div class="footer-wrap">
       <div>
@@ -50,8 +54,9 @@
         <a href="#">Facebook</a>
       </div>
     </div>
-    <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
+    <p class="copy">© 2025 START ESTÁGIO — Todos os direitos reservados</p>
   </footer>
-<!--<script src="../scripts/vagasCriadas.js"></script> -->
+
+  <script src="../scripts/vagasCriadas.js"></script>
 </body>
 </html>
