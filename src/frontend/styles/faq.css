@@ -21,9 +21,7 @@ body {
   min-height: 100vh;
 }
 
-/* ============================
-   HEADER
-   ============================ */
+
 header {
   background: #111;
   color: white;
@@ -62,7 +60,6 @@ header {
   text-decoration: underline;
 }
 
-/* utility button style (reused) */
 .btn-link {
   background: transparent;
   border: 1px solid white;
@@ -79,9 +76,6 @@ header {
   color: #111;
 }
 
-/* ============================
-   HERO
-   ============================ */
 .hero {
   position: relative;
   background: transparent;

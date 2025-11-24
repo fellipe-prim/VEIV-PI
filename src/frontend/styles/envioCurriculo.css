@@ -25,15 +25,15 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-decoration: none;
   background: #111;
   color: #fff;
-  margin-bottom: 25px;
-  font-size: 1.5rem;
-  transition: 0.3s;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
 }
 
 .back-btn:hover {
