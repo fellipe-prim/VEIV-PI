@@ -11,12 +11,12 @@ html, body {
 }
 
 body {
+  background: #f9f9f9;
+  color: #111;
+
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: #fff;
-  color: #222;
-  line-height: 1.6;
 }
 
 /* HEADER */
