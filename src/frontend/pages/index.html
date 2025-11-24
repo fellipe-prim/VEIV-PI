@@ -6,8 +6,8 @@
   <title>Portal de Estágios</title>
   <link rel="stylesheet" href="../styles/index.css">
   <link rel="stylesheet" href="../styles/vagas.css">
-
 </head>
+
 <body>
 <header>
   <div class="brand">
@@ -24,64 +24,68 @@
   </nav>
 </header>
 
-
 <section class="hero">
-  <div class="hero-content">
-    <h1>Conectando estudantes a oportunidades</h1>
-    <p>Busque estágios e inicie sua carreira de forma simples e rápida.</p>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1>Conectando estudantes a oportunidades</h1>
+      <p>Busque estágios e inicie sua carreira de forma simples e rápida.</p>
+    </div>
+  </section>
 
- <div class="wrap">
+<div class="main-container">
+  <div class="wrap">
     <h2 class="title">Vagas em destaque</h2>
     <div id="listaVagas" class="cards-container"></div>
   </div>
 
-<div id="aluno-login" class="popup hidden">
-  <div class="popup-content">
-    <h3>Login do Aluno</h3>
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Senha">
-    <button class="btn">Entrar</button>
-    <p>Ainda não tem conta? <a href="#" onclick="switchPopup('aluno-login','aluno-cadastro')">Cadastre-se</a></p>
-    <button class="close" onclick="closePopup('aluno-login')">Fechar</button>
+  <div id="aluno-login" class="popup hidden">
+    <div class="popup-content">
+      <h3>Login do Aluno</h3>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <button class="btn">Entrar</button>
+      <p>Ainda não tem conta?
+        <a href="#" onclick="switchPopup('aluno-login','aluno-cadastro')">Cadastre-se</a>
+      </p>
+      <button class="close" onclick="closePopup('aluno-login')">Fechar</button>
+    </div>
   </div>
-</div>
 
-<div id="aluno-cadastro" class="popup hidden">
-  <div class="popup-content">
-    <h3>Cadastro de Aluno</h3>
-    <input type="text" placeholder="Nome completo">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Senha">
-    <button class="btn" onclick="cadastrarAluno()">Cadastrar</button>
-    <button class="close" onclick="closePopup('aluno-cadastro')">Fechar</button>
+  <div id="aluno-cadastro" class="popup hidden">
+    <div class="popup-content">
+      <h3>Cadastro de Aluno</h3>
+      <input type="text" placeholder="Nome completo">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <button class="btn" onclick="cadastrarAluno()">Cadastrar</button>
+      <button class="close" onclick="closePopup('aluno-cadastro')">Fechar</button>
+    </div>
   </div>
-</div>
 
-
-<div id="empresa-login" class="popup hidden">
-  <div class="popup-content">
-    <h3>Login da Empresa</h3>
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Senha">
-    <button class="btn">Entrar</button>
-    <p>Ainda não tem conta? <a href="#" onclick="switchPopup('empresa-login','empresa-cadastro')">Cadastre-se</a></p>
-    <button class="close" onclick="closePopup('empresa-login')">Fechar</button>
+  <div id="empresa-login" class="popup hidden">
+    <div class="popup-content">
+      <h3>Login da Empresa</h3>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <button class="btn">Entrar</button>
+      <p>Ainda não tem conta?
+        <a href="#" onclick="switchPopup('empresa-login','empresa-cadastro')">Cadastre-se</a>
+      </p>
+      <button class="close" onclick="closePopup('empresa-login')">Fechar</button>
+    </div>
   </div>
-</div>
 
-<div id="empresa-cadastro" class="popup hidden">
-  <div class="popup-content">
-    <h3>Cadastro de Empresa</h3>
-    <input type="text" placeholder="Nome da Empresa">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Senha">
-    <button class="btn" onclick="cadastrarEmpresa()">Cadastrar</button>
-    <button class="close" onclick="closePopup('empresa-cadastro')">Fechar</button>
+  <div id="empresa-cadastro" class="popup hidden">
+    <div class="popup-content">
+      <h3>Cadastro de Empresa</h3>
+      <input type="text" placeholder="Nome da Empresa">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <button class="btn" onclick="cadastrarEmpresa()">Cadastrar</button>
+      <button class="close" onclick="closePopup('empresa-cadastro')">Fechar</button>
+    </div>
   </div>
-</div>
 
+</div> 
 
 <footer>
   <div class="footer-wrap">
