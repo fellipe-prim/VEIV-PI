@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${titulo}</h3>
         <p><strong>Empresa:</strong> ${empresa}</p>
         <p>${descricao}</p>
-      `;
+
+`;
 
       lista.appendChild(card);
     });

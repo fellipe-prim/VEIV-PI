@@ -30,8 +30,16 @@ async function carregarDetalhe() {
         <p><strong>Requisitos:</strong> ${vaga.requisitos}</p>
         <p><strong>Descrição:</strong> ${vaga.descricao}</p>
 
+        <button id="btnCandidatar" class="botao-candidatar">Candidatar-se</button>
       </div>
     `;
+
+    const botao = document.getElementById("btnCandidatar");
+
+        botao.addEventListener("click", () => {
+        alert("Candidatado com sucesso!");
+        });
+        
   } catch (err) {
     console.error("Erro:", err);
     detalhe.innerHTML = "<p>Erro ao buscar vaga.</p>";
