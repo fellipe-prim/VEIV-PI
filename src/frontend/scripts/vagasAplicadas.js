@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const vagas = normalizeToArray(json);
 
       if (vagas.length === 0) {
-        listaVagas.innerHTML = `<p>Nenhuma vaga cadastrada ainda.</p>`;
+        listaVagas.innerHTML = `<p>Nenhuma vaga aplicada ainda.</p>`;
         return;
       }
 
