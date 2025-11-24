@@ -10,7 +10,7 @@ document.getElementById("supportForm").addEventListener("submit", async (e) => {
   });
 
   if (response.ok) {
-    alert("Solicitação enviada com sucesso!");
+    alert("Solicitação enviada com sucesso! Você receberá uma resposta em até 48 horas no e-mail vindo de startestagio@suporte.com.");
     form.reset();
   } else {
     alert("Erro ao enviar. Tente novamente.");
