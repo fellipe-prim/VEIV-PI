@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/contato.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="../scripts/contato.js"></script>
+    
 </head>
 <header>
  <body> 
@@ -32,22 +32,12 @@
 
     <div class="suporte-box">
         <h2>Solicitação de Suporte</h2>
-        <form>
-
-            <!-- Nome -->
-            <input type="text" placeholder="Seu nome" id="fullName" required>
-
-            <!-- Email -->
-            <input type="email" placeholder="Seu e-mail" id="emailAddress" required>
-
-            <!-- Mensagem -->
-            <div class="mensagem-container">
-                <textarea placeholder="Sua mensagem" id="message" required></textarea>
-            </div>
-
-            <!-- Botão -->
-            <button type="submit">Enviar solicitação</button>
-        </form>
+        <form action="https://formspree.io/f/manzeege" method="POST" id="supportForm">
+          <input type="text" placeholder="Seu nome" name="nome" required>
+          <input type="email" placeholder="Seu e-mail" name="email" required>
+          <textarea placeholder="Sua mensagem" name="mensagem" required></textarea>
+          <button type="submit">Enviar solicitação</button>
+      </form>
     </div>
 </div>
 <footer>
@@ -72,6 +62,7 @@
   </div>
   <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
 </footer>
+<script src="../scripts/contato.js"></script>
 </body>
 
 </html>
