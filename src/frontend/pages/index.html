@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portal de Estágios</title>
   <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/vagas.css">
+
 </head>
 <body>
 <header>
@@ -12,7 +14,6 @@
     <img src="../imgs/logo.png" alt="Logo Estágio Verde">
   </div>
 
-  <!-- Menu principal à direita -->
   <nav class="header-right">
     <a href="index.html" class="active"><strong>Início</strong></a>
     <a href="vagas.html">Vagas</a>
@@ -28,32 +29,14 @@
   <div class="hero-content">
     <h1>Conectando estudantes a oportunidades</h1>
     <p>Busque estágios e inicie sua carreira de forma simples e rápida.</p>
-    <div class="search-row">
-      <input class="input" placeholder="Digite uma área ou cidade..." />
-      <button class="btn">Pesquisar</button>
-    </div>
   </div>
 </section>
 
-<div class="wrap">
-  <h2>Vagas em destaque</h2>
-  <div class="list">
-    <div class="card">
-      <h3>Estágio em TI</h3>
-      <div class="meta">São Paulo • 2 dias atrás</div>
-      <p>Atue com suporte e desenvolvimento de sistemas internos.</p>
-      <span class="pill">Estágio</span>
-    </div>
-    <div class="card">
-      <h3>Estagiário em Marketing</h3>
-      <div class="meta">Remoto • 5 dias atrás</div>
-      <p>Auxílio em campanhas digitais e gestão de redes sociais.</p>
-      <span class="pill">Remoto</span>
-    </div>
+ <div class="wrap">
+    <h2 class="title">Vagas em destaque</h2>
+    <div id="listaVagas" class="cards-container"></div>
   </div>
-</div>
 
-<!-- Popups -->
 <div id="aluno-login" class="popup hidden">
   <div class="popup-content">
     <h3>Login do Aluno</h3>
@@ -71,7 +54,6 @@
     <input type="text" placeholder="Nome completo">
     <input type="email" placeholder="Email">
     <input type="password" placeholder="Senha">
-    <!-- botão modificado -->
     <button class="btn" onclick="cadastrarAluno()">Cadastrar</button>
     <button class="close" onclick="closePopup('aluno-cadastro')">Fechar</button>
   </div>
@@ -95,7 +77,6 @@
     <input type="text" placeholder="Nome da Empresa">
     <input type="email" placeholder="Email">
     <input type="password" placeholder="Senha">
-    <!-- botão modificado -->
     <button class="btn" onclick="cadastrarEmpresa()">Cadastrar</button>
     <button class="close" onclick="closePopup('empresa-cadastro')">Fechar</button>
   </div>
@@ -125,6 +106,6 @@
   <p class="copy">© 2025 START ESTAGIO — Todos os direitos reservados</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="../scripts/index.js"></script>
 </body>
 </html>
